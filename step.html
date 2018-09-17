@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+.box {
+    width: 98%;
+    margin: 0 auto;
+}
+
+.step {
+    background: #50abe4;
+    display: inline-block;
+    color: #fff;
+    width: calc(33.3333% - 10px);
+    height: 40px;
+    background-color: #50abe4;
+    position: relative;
+    text-align: center;
+    line-height: 40px;
+}
+.step:before {
+    content: '';
+    display: block;
+    border-top: 20px solid #50abe4;
+    border-bottom: 20px solid #50abe4;
+    border-left: 20px solid #fff;
+    position: absolute;
+    left: 0px;
+    top: 0;
+}
+
+.step:after {
+    content: '';
+    display: block;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #50abe4;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    z-index: 1;
+}
+
+.step:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.step:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.step:last-child:after {
+    display: none;
+}
+
+.step:first-child:before {
+    display: none;
+}
+
+.step:last-child:after {
+    display: none;
+}
+
+.box>.active {
+    background-color: #ef72b6;
+}
+
+.box>.active:after {
+    border-left-color: #ef72b6;
+}
+
+.box>.active:before {
+    border-top-color: #ef72b6;
+    border-bottom-color: #ef72b6;
+}
+</style>
+
+<body>
+    <div class="box">
+        <div class="step active">拉拉</div>
+        <div class="step">拉拉</div>
+        <div class="step">拉拉</div>
+    </div>
+</body>
+
+</html>
