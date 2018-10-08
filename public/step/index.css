@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<style>
 .box {
-    width: 98%;
+    width: 80%;
     margin: 0 auto;
 }
 
 .step {
-    background: #50abe4;
+    background: #ccc;
     display: inline-block;
     color: #fff;
-    width: calc(33.3333% - 10px);
+    width: calc(25% - 4px);
     height: 40px;
-    background-color: #50abe4;
+    background-color: #ccc;
     position: relative;
     text-align: center;
     line-height: 40px;
@@ -25,8 +17,8 @@
 .step:before {
     content: '';
     display: block;
-    border-top: 20px solid #50abe4;
-    border-bottom: 20px solid #50abe4;
+    border-top: 20px solid #ccc;
+    border-bottom: 20px solid #ccc;
     border-left: 20px solid #fff;
     position: absolute;
     left: 0px;
@@ -38,7 +30,7 @@
     display: block;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    border-left: 20px solid #50abe4;
+    border-left: 20px solid #ccc;
     position: absolute;
     right: -20px;
     top: 0;
@@ -67,26 +59,30 @@
     display: none;
 }
 
+/* 当前状态 */
 .box>.active {
-    background-color: #ef72b6;
+    background-color: #f39c12;
 }
 
 .box>.active:after {
-    border-left-color: #ef72b6;
+    border-left-color: #f39c12;
 }
 
 .box>.active:before {
-    border-top-color: #ef72b6;
-    border-bottom-color: #ef72b6;
+    border-top-color: #f39c12;
+    border-bottom-color: #f39c12;
 }
-</style>
 
-<body>
-    <div class="box">
-        <div class="step active">拉拉</div>
-        <div class="step">拉拉</div>
-        <div class="step">拉拉</div>
-    </div>
-</body>
+/* 完成状态 */
+.box>.already {
+    background-color: #50abe4;
+}
 
-</html>
+.box>.already:after {
+    border-left-color: #50abe4;
+}
+
+.box>.already:before {
+    border-top-color: #50abe4;
+    border-bottom-color: #50abe4;
+}
