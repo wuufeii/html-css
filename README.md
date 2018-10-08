@@ -10,6 +10,6 @@ html和css的一些练习
     pbublic中放各案例
     1.step文件是自己练习箭头步骤的，主要是利用before和after实现箭头，效果截图如下
 <div align="center">
-  <img width="300" src="./step/1.png"/>
+  <img width="300" src="./public/step/1.png"/>
 </div>
 
